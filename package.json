@@ -1,0 +1,32 @@
+{
+  "name": "equalish",
+  "description": "Shallow compare A to B, where A[key] can be a RegExp.",
+  "version": "1.0.0",
+  "author": "John Flesch <john@fles.ch> (https://fles.ch/)",
+  "bugs": {
+    "url": "https://github.com/flesch/equalish/issues"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-preset-es2015": "^6.16.0"
+  },
+  "homepage": "https://github.com/flesch/equalish",
+  "keywords": [
+    "array",
+    "compare",
+    "equal",
+    "fuzzy",
+    "object",
+    "shallow"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flesch/equalish.git"
+  },
+  "scripts": {
+    "compile": "babel index.js --out-file dist/index.js",
+    "prepublish": "npm run compile"
+  }
+}
