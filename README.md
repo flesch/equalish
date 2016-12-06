@@ -26,6 +26,13 @@ equalish([1, 2, 3], [1, 2, 4]); // => false
 equalish({ one:'ONE' }, { one:'ONE' }, (a, b) => {
   return a.toLowerCase() === b.toLowerCase();
 }); // => true
+
+// Note: Using a custom "compare" function will not check the key
+// lengths of each object before evaluating the comparator.
+equalish({ keys_here_are:'required' }, { keys_here_are:'required', extra_keys_are:'ignored' }, (a, b) => {
+  return a === b;
+}); // => true
+
 ```
 
 ## License
